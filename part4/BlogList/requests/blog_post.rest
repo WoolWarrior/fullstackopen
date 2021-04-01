@@ -1,0 +1,117 @@
+POST http://localhost:3003/api/blogs HTTP/1.1
+content-type: application/json
+
+{
+  "title": "Tesla",
+  "author": "Tesla",
+  "url": "www.tesla.com",
+  "likes": 15
+}
+
+###
+GET http://localhost:3003/api/blogs
+
+###
+DELETE http://localhost:3003/api/blogs/60643c0ef5fad6054046d89e HTTP/1.1
+
+### 
+
+POST http://localhost:3003/api/users HTTP/1.1
+content-type: application/json
+
+{
+  "blogs":[ ],
+  "username": "ro",
+  "name": "Superuser",
+  "password": "salainen"
+}
+
+### 
+
+POST http://localhost:3003/api/users HTTP/1.1
+content-type: application/json
+
+{
+  "blogs":[ ],
+  "username": "normal3",
+  "name": "Normaluser",
+  "password": "salainen"
+}
+
+### 
+
+POST http://localhost:3003/api/users HTTP/1.1
+content-type: application/json
+
+{
+  "blogs":[ ],
+  "username": "normal2",
+  "name": "Normaluser",
+  "password": "sa"
+}
+
+###
+GET http://localhost:3003/api/users
+
+###
+
+POST http://localhost:3003/api/login HTTP/1.1
+content-type: application/json
+
+{
+  "username": "root",
+  "password": "salainen"
+}
+
+###
+
+POST http://localhost:3003/api/login HTTP/1.1
+content-type: application/json
+
+{
+  "username": "normal3",
+  "password": "wrong"
+}
+
+### 
+
+POST http://localhost:3003/api/users HTTP/1.1
+content-type: application/json
+
+{
+  "blogs":[ ],
+  "username": "user20",
+  "name": "user20",
+  "password": "user20pass"
+}
+
+###
+
+POST http://localhost:3003/api/login HTTP/1.1
+content-type: application/json
+
+{
+  "username": "user20",
+  "password": "user20pass"
+}
+
+###
+
+POST http://localhost:3003/api/login HTTP/1.1
+content-type: application/json
+
+{
+  "username": "user20",
+  "password": ""
+}
+
+###
+POST http://localhost:3003/api/blogs HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIyMCIsImlkIjoiNjA2NjEzMzIzYzQ4YWE0OWE1YmVmNjQzIiwiaWF0IjoxNjE3MzA0MjUzfQ.Xvs1PEijU7Ydjj7TeXxP6ae-YZlNY37IrE-WJhW9NFM
+
+{
+  "title": "New blog3",
+  "author": "someone",
+  "url": "www.newblog.com"
+}
