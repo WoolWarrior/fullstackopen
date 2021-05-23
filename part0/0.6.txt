@@ -1,0 +1,15 @@
+title 0.6
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+
+note over browser: 
+browser add new note to DOM
+and redraw notes
+end note
+
+note over server:
+server creates new note 
+that is stored in an array
+end note
+
+
